@@ -40,8 +40,8 @@
           <!-- Wrapper for slides -->
 
           <div class="carousel-inner">
-            <?php #Banner --- Inicio Laço ?>
-                <div class="item" style="background-image:url('<?php #Url Banner ?>')">
+            <?php foreach ($banners as $banner): ?>
+                <div class="item <?= ($banner['id']==1) ? 'active': '' ?>" style="background-image:url('<?= $banner['url']; ?>')">
                   <div class="container">
                     <div class="row">
                         <div class="span12">
@@ -51,7 +51,7 @@
                     </div>
                   </div>
                </div>
-           <?php #Banner ---- Fim Laço?>
+           <?php endforeach;?>
          </div>
 
           <!-- Controls -->
